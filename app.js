@@ -12,6 +12,8 @@ const listId = "8ceb56e6f1";
 const app = express();
 app.use(bodyParser.urlencoded({extended:true}));
 
+const port = pprocess.env.PORT || 3000;
+
 app.use(express.static("public"));
 
 app.get("/", function( req, res){
@@ -86,7 +88,7 @@ app.post("/success", function (req,res){
 
 
 
-app.listen(3300, () => console.log("Server started at port 3300."));
+app.listen(port, () => console.log(`Server started at port ${port}.`));
 
 //mailchimp api
 //a1d3ff12b0d79077125a37bfd21f00fa-us14
