@@ -12,7 +12,7 @@ const listId = "8ceb56e6f1";
 const app = express();
 app.use(bodyParser.urlencoded({extended:true}));
 
-const port = pprocess.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 app.use(express.static("public"));
 
