@@ -6,9 +6,10 @@
 Deployed using [Render](https://render.com) - free tier.
 
 ## Try offline:
-1. Fork it.
-2. Run command ```npm i``` within directory. It will install all npm packages used in the project. Used packages can be checked in **package.json** file.
-3. Open brower and open visit port 3000 or Alternatively [Click here](http://localhost:3000/).
+1. Clone it.
+2. Make local module and name it **api-id.js**, then export Mailchimp api key, audience id and server the module.
+3. Run command ```npm i``` within directory. *It will install all npm packages used in the project. Used packages can be checked in **package.json** file.*
+4. Open brower and open visit port 3000 or Alternatively [Click here](http://localhost:3000/).
 ---  
 
 ## Folder Structure:  
@@ -66,6 +67,7 @@ Deployed using [Render](https://render.com) - free tier.
 - Hide the Mailchimp api-key, audience id and server id using external local module.
 - ejs is used for templating purpose.
 - Errors while trying to subscribe with subscribed email is handled and updated page is shown.
+- Included node_modules dir in gitignore and removed previous version node_modules from remote git repo.
 
 ### Version 1
 - Full functional web app is deployed using render. 
@@ -79,6 +81,10 @@ Deployed using [Render](https://render.com) - free tier.
 - md5
 - bodyParser
 
+# Learning
+## Hide API keys without using .NET env:
+In v1, I have directly put api key and audience in app.js file. In v2, I have fixed this using external module and include that external module in gitignore file. Same file is then created by using *echo command* in build message of render/heruko server.  
+[YouTube tutorial](https://www.youtube.com/watch?v=2J3xbMkH2K4) by Dave Gray has helped me on this.
 
 ## My understanding building this project
 > Templating with ejs.
