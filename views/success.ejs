@@ -1,0 +1,18 @@
+<%- include("partials/header"); -%>
+<div class="jumbotron jumbotron-fluid">
+  <div class="box">
+    <% if(logic){ %>
+      <h1 class="display-4">Success...</h1>
+      <p class="lead">You have successfully sign up for newsletter. Thank you.</p>
+    <% }else{ %>
+      <h1 class="display-4">Update...</h1>
+      <p class="lead">Provided email has been successfully sign up for newsletter along with updated name. Thank you.</p>
+    <% } %>
+    
+    
+    <form action="/success" method="post">
+      <button class="btn btn-lg btn-dark">Home</button>
+    </form>
+  </div>
+</div>
+<%- include("partials/footer"); -%>
